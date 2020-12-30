@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { AuthService } from '../auth/auth.service';
-import { ApiService } from '../api.service';
+// import { ApiService } from '../api.service';
 
 @Component({
   selector: 'account',
@@ -17,16 +17,16 @@ export class AccountComponent {
   profile: any;
   responseJson: string;
 
-  constructor(public authService: AuthService, private api: ApiService) {
+  constructor(public authService: AuthService/*, private api: ApiService*/) {
     this.profile = JSON.parse(localStorage.getItem('profile'));
     console.log(this.profile);
    }
-  pingApi() {
-    this.api
-      .ping$()
-      .subscribe(
-        (res) => (this.responseJson = JSON.stringify(res, null, 2).trim())
-      );
-  }
+  // pingApi() {
+  //   this.api
+  //     .ping$()
+  //     .subscribe(
+  //       (res) => (this.responseJson = JSON.stringify(res, null, 2).trim())
+  //     );
+  // }
 
 }
