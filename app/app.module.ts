@@ -10,10 +10,9 @@ import { AccountComponent } from "./account/account.component";
 import { CallbackComponent } from "./callback/callback.component";
 
 import { AuthService } from "./auth/auth.service";
-import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   declarations: [
     AppComponent,
     HomeComponent,
